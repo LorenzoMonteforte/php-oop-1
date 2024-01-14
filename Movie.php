@@ -14,6 +14,18 @@ class Movie
 
     public function description()
     {
-        return $this->original_title . " è un film di genere " . $this->genre . " diretto da " . $this->direction;
+        return $this->original_title . " è un film di genere " . $this->show_genre() . " diretto da " . $this->direction;
+    }
+
+    public function show_genre(){
+        $genre = "";
+        for($i=0; $i<sizeof($this->genre); $i++){
+            if($i == (sizeof($this->genre)-1)){
+                $genre = $genre . $this->genre[$i];
+            }else{
+                $genre = $genre . $this->genre[$i] . ", ";
+            }
+        }
+        return $genre;
     }
 }

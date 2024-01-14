@@ -24,7 +24,7 @@ require __DIR__ . "/dati.php";
                  </li>
                  <li>
                      <p>
-                         Genere: " . $film[$i]->genre .
+                         Genere: " . $film[$i]->show_genre() .
                      "</p>
                  </li>
                  <li>
